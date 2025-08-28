@@ -1,14 +1,36 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
     <head>
-        <link rel="stylesheet" href="index.css">
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>Track Anything</title>
+        <link rel="icon" type="image/png" href="images/favicon.ico">
+        <link rel="stylesheet" href="index.css"/>
     </head>
     <body>
-        <input type="text" id="input-el">
-        <button id="input-btn">SAVE INPUT</button>
-        <button id="tab-btn">SAVE TAB</button>
-        <button id="delete-btn">DELETE ALL</button>
-        <ul id="ul-el">
-        </ul>
+        <main class="container">
+            <h1 class="title">Track Anything</h1>
+            <form id="input-form" autocomplete="off">
+                <label for="input-el" class="sr-only">Enter item</label>
+                <input
+                        type="text"
+                        id="input-el"
+                        placeholder="Enter a link"
+                        aria-label="Item to save"
+                        required
+                />
+                <div class="buttons">
+                    <button type="submit" id="input-btn">Save Input</button>
+                    <button type="button" id="tab-btn">Save Tab</button>
+                    <button type="button" id="delete-btn" aria-label="Delete all items">
+                        Delete All
+                    </button>
+                </div>
+            </form>
+
+            <ul id="ul-el" class="item-list" aria-live="polite"></ul>
+        </main>
+
         <script src="index.js"></script>
     </body>
 </html>

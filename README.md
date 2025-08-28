@@ -47,3 +47,6 @@ While building this project, I practiced:
 - **Source:** Scrimba Frontend Developer Path
 
 ---
+
+## 📸 Screenshot
+![Track Anything Extension](./images/screenshot.png)
